@@ -120,7 +120,6 @@ class	Dadu::Deck::missing_array : public deck_exception{
 		//save array info
 		if(deck_t.deck_size <= 0){
 			throw Dadu::Deck::invalid_argument();
-			return;
 		}
 		deck_size = deck_t.deck_size;
 		
@@ -132,7 +131,6 @@ class	Dadu::Deck::missing_array : public deck_exception{
 		int* deck_validate_tmp = new int[deck_size];
 		if(deck_arr == nullptr || deck_inits == nullptr || deck_validate == nullptr){
 			throw std::bad_alloc();
-			return;
 		}
 		for(int i = 0 ; i < deck_size ; i++){
 			deck_arr_tmp[i] = deck_t.deck_arr[i];
@@ -166,7 +164,7 @@ class	Dadu::Deck::missing_array : public deck_exception{
 		
 		int index = std::rand() % current_size;
 		int ret_value = this->getValue(index);
-		this->setValue(index , this->getValue(--deck_size));
+		this->setValue(index , this->getValue(--current_size));
 		
 		return ret_value;
 	}
