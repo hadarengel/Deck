@@ -6,7 +6,8 @@
 
 namespace Dadu{
 
-	
+	// class for implementig the mechanism of a shuffled deck
+	// 	operate at time complexity of o(1).
 	class Deck{
 		int deck_size;
 		int current_size;
@@ -16,24 +17,29 @@ namespace Dadu{
 		int validate_size;
 			
 		public:
-			//deck exections:
-			class deck_exception;
-			class invalid_argument;
-			class deck_empty;
-			class deck_full;
-			class missing_array;
-
-			Deck(const int deck_size_t);
-			Deck(const Deck& deck_t);
-			~Deck();
-			Deck& operator=(Deck& deck_t);
-			int pullIndex();
-			void pushIndex(int index);
-			int getDeckSize();
-			int getCurrentSize();
-			void resetDeck();
-			void emptyDeck();
+	/***************deck exceptions****************************/
+	/**/		class deck_exception;			/**/
+	/**/		class invalid_argument;			/**/
+	/**/		class deck_empty;			/**/
+	/**/		class deck_full;			/**/
+	/**/		class missing_array;			/**/
+	/**********************************************************/
 			
+		
+	/***************deck functions*****************************/
+	/**/							/**/
+	/**/							/**/
+	/**/		Deck(const int deck_size_t);		/**/
+	/**/		Deck(const Deck& deck_t);		/**/
+	/**/		~Deck();				/**/
+	/**/		Deck& operator=(Deck& deck_t);		/**/
+	/**/		int pullIndex();			/**/
+	/**/		void pushIndex(int index);		/**/
+	/**/		int getDeckSize();			/**/
+	/**/		int getCurrentSize();			/**/
+	/**/		void resetDeck();			/**/
+	/**/		void emptyDeck();			/**/
+	/**********************************************************/		
 
 
 
